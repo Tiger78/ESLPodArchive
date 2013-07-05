@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentLeft="true" >
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+        </TabWidget>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/tab1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <EditText
+                        android:id="@+id/editText1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.05"
+                        android:ems="10"
+                        android:hint="input search string" >
+                    </EditText>
+
+                    <Button
+                        android:id="@+id/search"
+                        android:layout_width="93dp"
+                        android:layout_height="wrap_content"
+                        android:text="Search" />
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/searchProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <ListView
+                    android:id="@+id/listView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" >
+                </ListView>
+
+                <Button
+                    android:id="@+id/findmore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Find more" />
+            </LinearLayout>
+
+			<include layout="@layout/player"/>
+			<include layout="@layout/downloads"/>
+        </FrameLayout>
+    </LinearLayout>
+
+</TabHost>
